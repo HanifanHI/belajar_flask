@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Demo Jinja2 For Dari Database</h2>
+    <p>Mengakses data dari tabel didalam database</p>
+
+    {# Menampilkan setiap elemen didalam list #}
+    <table border="1">
+        <tr>
+            <th width="50">Kode</th>
+            <th width="150">Nama</th>
+            <th width="100">Harga</th>
+        </tr>
+        {% for elemen in data %}
+        <tr>
+            <td>{{ elemen[0] }}</td>
+            <td>{{ elemen[1] }}</td>
+            <td>{{ elemen[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>

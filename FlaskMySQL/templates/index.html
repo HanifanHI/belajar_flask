@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Demo Flask With MySQL Database</h2>
+
+    <table border="1">
+        <tr>
+            <th width="60">Id</th>
+            <th width="200">Judul</th>
+            <th width="150">Penulis</th>
+            <th width="150">Penerbit</th>
+            <th width="100">Ubah</th>
+            <th width="100">Hapus</th>
+        </tr>
+
+        {% for elemen in data %}
+        <tr>
+            <td>{{ elemen[0] }}</td>
+            <td>{{ elemen[1] }}</td>
+            <td>{{ elemen[2] }}</td>
+            <td>{{ elemen[3] }}</td>
+            <td><a href="http://localhost:5000/ubah/{{ elemen[0] }}">Ubah</a></td>
+            <td><a href="http://localhost:5000/hapus/{{ elemen[0] }}">Hapus</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p><a href="http://localhost:5000/tambah">Tambah Data</a></p>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Menyambungkan file CSS kedalam HTML menggunakan method url_for()-->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css"> -->
+
+    <!-- Menyambungkan file CSS kedalam HTML -->
+    <link rel="stylesheet" href="../static/css/style.css" type="text/css">
+
+    <!-- Menyambungkan file Javascript kedalam HTML menggunakan method url_for-->
+    <!-- <script src="{{ url_for('static', filename='functions.js') }}" type="text/javascript"></script> -->
+
+    <!-- Menyambungkan file Javascript kedalam HTML -->
+    <script src="../static/javascript/functions.js"></script>
+
+</head>
+
+<body>
+    <h2>Jinja2 File Statis</h2>
+
+    <h3>Pemrograman Web dengan Python dan Flask</h3>
+    <p>Contoh pembuatan kode CSS yang kita buat</p>
+
+    <hr>
+
+    <p>Contoh penggunaan kode javascript di dalam template</p>
+    {# Memanggil fungsi yang ditulis dalam javascript #}
+    2 * 3 =
+    <script lang="Javascript">
+        var result = kali(2, 3);
+        document.write(result);
+    </script>
+    <br>
+
+    2 ** 3 =
+    <script lang="Javascript">
+        var result = pangkat(2, 3);
+        document.write(result);
+    </script>
+
+    <hr>
+
+    <h3>Menampilkan gambar ke template</h3>
+    <!-- Menampilkan Gambar ke dalam Template menggunakan url_for-->
+    <!-- <img src="{{ url_for('static', filename='flask.png') }}" alt=""> -->
+
+    <!-- Menampilkan Gambar ke dalam Template-->
+    <img src="../static/images/flask.png" alt="flask" width="300px">
+
+</body>
+
+</html>

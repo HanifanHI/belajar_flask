@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Demo Jinja2 For</h2>
+
+    <!-- MENGGUNAKAN DATA DICTIONARY -->
+    <h3>Menggunakan data dictionary</h3>
+    {# Menampilkan setiap elemen didalam variabel dictionary #}
+    <ul>
+        {% for key, value in dictionary.items() %}
+        <li><a href="{{ key }}">{{ value }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <hr>
+
+    <!-- MENGGUNAKAN DATA TUPLE -->
+    <h3>Menggunakan data tuple</h3>
+    <ul>
+        {% for elemen in data %}
+        <li><a href="{{ elemen[0] }}">{{ elemen[1] }}</a></li>
+        {% endfor %}
+    </ul>
+
+</body>
+
+</html>

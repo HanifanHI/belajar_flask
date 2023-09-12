@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <title>Login</title>
+</head>
+
+<body>
+    <h2>Demo Login Sederhana</h2>
+    <br>
+    <form action="http://localhost:5000/login" method="post">
+        <!-- Mengambil data pada dictionary cara 1 -->
+        {{model.labels.get('username')}} <br>
+        <input type="text" , name="username"> <br>
+        <!-- Mengambil data pada dictionary cara 2 -->
+        {{model.labels['password']}} <br>
+        <input type="password" name="password"> <br>
+        <p><input type="submit" value="Login"></p>
+    </form>
+</body>
+
+</html>

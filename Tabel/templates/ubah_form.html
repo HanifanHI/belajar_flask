@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <title>Tabel</title>
+</head>
+
+<body>
+    <h2>Ubah Data</h2>
+
+    <form action="http://localhost:5000/ubah/{{model.kode}}" method="post">
+        <!-- Kode ngga bisa diubah -->
+        Kode: <br>
+        <input type="text" name="kode" size="15" value="{{ model.kode }}" readonly> <br>
+        Nama Produk: <br>
+        <input type="text" name="nama" size="30" value="{{ model.nama }}"> <br>
+        Harga: <br>
+        <input type="text" name="harga" size="25" value="{{ model.harga }}"> <br>
+        <p><input type="submit" value="Simpan"></p>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Demo Type Text</h2>
+
+    {% if pesan %}
+    <p style="color: red;">{{ pesan }}</p>
+    {% endif %}
+
+    <form action="/" method="post">
+        Nama : <br>
+        <input type="text" name="nama" size="25px"> <br>
+        Email : <br>
+        <input type="text" name="email" size="25px"> <br>
+        Jenis Kelamin : <br>
+        <input type="radio" name="jenisKelamin" value="L" checked>Laki-laki
+        <input type="radio" name="jenisKelamin" value="P">Perempuan <br>
+        Agama : <br>
+        <input type="radio" name="agama" value="1" checked>Islam
+        <input type="radio" name="agama" value="2">Kristen
+        <input type="radio" name="agama" value="3">Hindu
+        <input type="radio" name="agama" value="4">Budha <br>
+        Skill : <br>
+        <input type="checkbox" name="skill" value="flask">Flask
+        <input type="checkbox" name="skill" value="django">Django
+        <input type="checkbox" name="skill" value="flutter">Flutter
+        <input type="checkbox" name="skill" value="laravel">Laravel
+        <input type="checkbox" name="skill" value="java">Java <br>
+        Komentar : <br>
+        <textarea name="komentar" cols="40" rows="4"></textarea> <br>
+        Password : <br>
+        <input type="password" name="password" size="25px"> <br>
+        Negara : <br>
+        <!-- Jika size adalah 1, maka user hanya boleh memilih satu -->
+        <select name="negara" size="1">
+            <option value="1">Indonesia</option>
+            <option value="2">Belanda</option>
+            <option value="3">Spanyol</option>
+            <option value="4">China</option>
+            <option value="5">Amerika</option>
+        </select> <br>
+        <!-- Jika size lebih dari 1, maka user boleh memilih lebih dari 1 -->
+        <!-- Tambahkan artribut multiple -->
+        Hobi : <br>
+        (Tekan Ctrl+klik untuk memilih lebih dari satu) <br>
+        <select name="hobi" size="5" multiple>
+            <option value="Memabaca">Memabaca</option>
+            <option value="Menulis">Menulis</option>
+            <option value="Berenang">Berenang</option>
+            <option value="Sepak bola">Sepak bola</option>
+            <option value="Memancing">Memancing</option>
+        </select> <br>
+        <p><input type="submit" value="Kirim"></p>
+    </form>
+</body>
+
+</html>

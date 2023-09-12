@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Demo Flask-WTF</h2>
+
+    {% if pesan %}
+    <p style="color: red;">{{ pesan }}</p>
+    {% endif %}
+
+    <form method="post">
+        {{ form.namaUser.label }} <br>
+        {{ form.namaUser() }} <br>
+        {{ form.password.label }} <br>
+        {{ form.password() }} <br>
+        {{ form.jenisKelamin.label }} <br>
+        {{ form.jenisKelamin() }} <br>
+        {{ form.agama.label }} <br>
+        {{ form.agama() }} <br>
+        {{ form.hobi1() }} {{ form.hobi1.label }} <br>
+        {{ form.hobi2() }} {{ form.hobi2.label }} <br>
+        {{ form.hobi3() }} {{ form.hobi3.label }} <br>
+        <p>{{ form.submit() }}</p>
+    </form>
+</body>
+
+</html>

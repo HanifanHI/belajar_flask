@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {# Menampilkan nilai dan b #}
+    Nilai a = {{ a }} <br>
+    Nilai b = {{ b }} <br>
+    {% if b != 0 %}
+    Hasil dari {{ a }} / {{ b }} = {{ a / b }}
+    {% endif %}
+
+    <hr>
+
+    Nilai c = {{ c }} <br>
+    {% if c == 0 %}
+    Nilai c adalah nol
+    {% elif c < 0 %} Nilai c adalah bilangan negatif {% else %} Nilai c adalah bilangan positif {% endif %} </body>
+
+</html>

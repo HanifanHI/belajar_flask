@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Hasil Response</h2>
+
+    <p>Nama : {{ nama }}</p>
+    <p>Email : {{ email }}</p>
+    <p>Komentar : {{ komentar }}</p>
+
+    {% if jenisKelamin == 'L' %}
+    <p>Jenis Kelamin : Laki-laki</p>
+    {% else %}
+    <p>Jenis Kelamin : Perempuan</p>
+    {% endif %}
+
+    {% if agama == '1' %}
+    <p>Agama : Islam</p>
+    {% elif agama == '2' %}
+    <p>Agama : Kristen</p>
+    {% elif agama == '3' %}
+    <p>Agama : Hindu</p>
+    {% else %}
+    <p>Agama : Budha</p>
+    {% endif %}
+
+    Skill Programming :
+    {% for elemen in skill %}
+    {{ elemen ~ ', '}}
+    {% endfor %}
+
+    <br>
+
+    {% if negara == '1' %}
+    Negara : Indonesia
+    {% elif negara == '2' %}
+    Negara : Belanda
+    {% elif negara == '3' %}
+    Negara : Spanyol
+    {% elif negara == '4' %}
+    Negara : China
+    {% else %}
+    Negara : Amerika
+    {% endif %}
+
+    <br>
+
+    Hobi :
+    {% for elemen in hobi %}
+    {{ elemen ~ ', ' }}
+    {% endfor %}
+
+</body>
+
+</html>

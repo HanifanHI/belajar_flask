@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>Demo Table in Database</title>
+</head>
+
+<body>
+    <h2>Demo Table in Database</h2>
+    <table border="1">
+        <tr>
+            <th width="60">Kode</th>
+            <th width="150">Nama</th>
+            <th width="100">Harga</th>
+            <th width="80">Ubah</th>
+            <th width="80">Hapus</th>
+        </tr>
+        {% for model in container %}
+        <tr>
+            <td>{{ model.kode }}</td>
+            <td>{{ model.nama }}</td>
+            <td>{{ model.harga }}</td>
+            <td><a href="http://localhost:5000/ubah/{{model.kode}}">Ubah</a></td>
+            <td><a href="http://localhost:5000/hapus/{{model.kode}}">Hapus</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p><a href="http://localhost:5000/tambah">Tambah Data</a></p>
+</body>
+
+</html>

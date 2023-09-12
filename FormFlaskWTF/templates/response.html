@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Hasil Response</h2>
+    <p>Selamat datang, {{ namaUser }}</p> <br>
+
+    Jenis Kelamin :
+    {% if jenisKelamin == 'L' %}
+    Laki-laki
+    {% else %}
+    Perempuan
+    {% endif %}
+
+    <br>
+
+    Agama :
+    {% if agama == 1 %}
+    Islam
+    {% elif agama == 2 %}
+    Kristen
+    {% elif agama == 3 %}
+    Hindu
+    {% elif agama == 4 %}
+    Budha
+    {% else %}
+    Katolik
+    {% endif %}
+
+    <br>
+
+    Hobi :
+    {% if hobi1 == true %}
+    Olahraga
+    {% endif %}
+    {% if hobi2 == true %}
+    Berenang
+    {% endif %}
+    {% if hobi3 == true %}
+    Membaca
+    {% endif %}
+
+</body>
+
+</html>
